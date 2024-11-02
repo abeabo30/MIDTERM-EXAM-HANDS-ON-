@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Red Burger</title>
+    <link rel="icon" type="image/x-icon" href="logo 1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="logo"><img src="logo 1.png" style="width: 40px; height: auto;" alt=""><img src="logo.png" alt=""></div>
+        <!-- Navigation Bar with Cart Icon -->
+        <nav class="nav-cart">
+            <div class="cart-icon" onmouseover="showCartItems()" onmouseout="hideCartItems()">
+                <img src="bag.png" alt="Cart" style="width: 30px; height: autopx;">
+                <div style="color: black;" class="cart-dropdown" id="cartDropdown">
+                    <h3>My Bag</h3>
+                    <div id="cartList"></div>
+                    <br> <button class="confirm-order-btn" class="confirm-cart" onclick="confirmCart()">Add to Order</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="other-sidebar">
+                <br><br><br>
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="#burgerid"><img src="icons/burger.png" alt="Burgers" class="icon"> Burgers</a></li>
+                    <li><a href="#sandwichesid"><img src="icons/sandwich.png" alt="Sandwiches" class="icon"> Sandwiches</a></li>
+                    <li><a href="#wrapsid"><img src="icons/wrap.png" alt="Wraps" class="icon"> Wraps</a></li>
+                    <li><a href="#dessertid"><img src="icons/dessert.png" alt="Desserts" class="icon"> Desserts</a></li>
+                    <li><a href="#sidesid"><img src="icons/sides.png" alt="Sides" class="icon"> Sides</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <section class="content">
+            <br><br>
+            <!-- Offer Banner -->
+            <div class="banner">
+                <img src="bg1.png" alt="Banner Image">
+                <div class="black-overlay"></div>
+                <div class="banner-text">
+                    <h2>Save 10% on Multi-Item Orders!</h2>
+                    <p>Enjoy a 10% discount when you add 2 or more of the same item to your order!</p>
+                </div>
+            </div>
+
+            <!-- Product Section -->
+            <br> <br> <br>
+            <h2 id="burgerid">Special Burgers</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Burger/BBQ Bacon Cheeseburger.png" alt="Burger Image">
+                    <p>BBQ Bacon Cheeseburger</p>
+                    <span>₱290.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('BBQ Bacon Cheeseburger', 290)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/Classic Burger.png" alt="Burger Image">
+                    <p>Classic Burger</p>
+                    <span>₱240.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Classic Burger', 240)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/Classic Double Cheeseburger.png" alt="Burger Image">
+                    <p>Classic Double Cheeseburger</p>
+                    <span>₱280.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Classic Double Cheeseburger', 280)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/Crispy Chicken Burger.png" alt="Burger Image">
+                    <p>Crispy Chicken Burger</p>
+                    <span>₱220.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Crispy Chicken Burger', 220)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Burger/Double Cheese Patty Burger.png" alt="Burger Image">
+                    <p>Double Cheese Patty Burger</p>
+                    <span>₱300.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Double Cheese Patty Burger', 300)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/double patty (2).png" alt="Burger Image">
+                    <p>Regular Double Patty Burger</p>
+                    <span>₱270.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Regular Double Patty Burger', 270)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/Spicy Chicken Burger.png" alt="Burger Image">
+                    <p>Spicy Chicken Burger</p>
+                    <span>₱210.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Spicy Chicken Burger', 210)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Burger/Triple Stack Burger.png" alt="Burger Image">
+                    <p>Quadro Stack Burger</p>
+                    <span>₱300.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Quadro Stack Burger', 300)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sandwiches Section -->
+            <br><br>
+            <h2 id="sandwichesid">Sandwiches</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Sandwich/Classic Ham Sandwich.png" alt="Sandwich Image">
+                    <p>Classic Ham Sandwich</p>
+                    <span>₱150.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Classic Ham Sandwich', 150)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sandwich/Ham and Lettuce Sandwich.png" alt="Sandwich Image">
+                    <p>Ham and Lettuce Sandwich</p>
+                    <span>₱170.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Ham and Lettuce Sandwich', 170)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sandwich/Multi-grain Chicken Sandwich.png" alt="Sandwich Image">
+                    <p>Multi-grain Chicken Sandwich</p>
+                    <span>₱250.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Multi-grain Chicken Sandwich', 250)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sandwich/Turkey and Cheese Sandwich.png" alt="Sandwich Image">
+                    <p>Turkey and Cheese Sandwich</p>
+                    <span>₱270.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Turkey and Cheese Sandwich', 270)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wraps Section -->
+            <br><br>
+            <h2 id="wrapsid">Wraps</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Wrap/Beef Burrito Wrap.png" alt="Wrap Image">
+                    <p>Beef Burrito Wrap</p>
+                    <span>₱280.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Beef Burrito Wrap', 280)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Wrap/Chicken Caesar Wrap.png" alt="Wrap Image">
+                    <p>Chicken Caesar Wrap</p>
+                    <span>₱260.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Chicken Caesar Wrap', 260)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Wrap/Grilled Chicken Wrap.png" alt="Wrap Image">
+                    <p>Grilled Chicken Wrap</p>
+                    <span>₱230.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Grilled Chicken Wrap', 230)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Wrap/Turkey Avocado Wrap.png" alt="Wrap Image">
+                    <p>Turkey Avocado Wrap</p>
+                    <span>₱300.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Turkey Avocado Wrap', 300)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <br><br>
+            <h2 id="dessertid">Desserts</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Dessert/Chocolate Chip Cookies.png" alt="Dessert Image">
+                    <p>Chocolate Chip Cookies</p>
+                    <span>₱120.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Chocolate Chip Cookies', 120)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Dessert/Chocolate Chip Cupcake.png" alt="Dessert Image">
+                    <p>Chocolate Chip Cupcake</p>
+                    <span>₱130.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Chocolate Chip Cupcake', 130)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Dessert/Strawberry Cupcake.png" alt="Dessert Image">
+                    <p>Strawberry Cupcake</p>
+                    <span>₱140.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Strawberry Cupcake', 140)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Dessert/Vanilla Sprinkle Cupcake.png" alt="Dessert Image">
+                    <p>Vanilla Sprinkle Cupcake</p>
+                    <span>₱150.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Vanilla Sprinkle Cupcake', 150)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sides Section -->
+            <br><br>
+            <h2 id="sidesid">Sides</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="menu/Sides/BBQ Chicken Wings.png" alt="Side Image">
+                    <p>BBQ Chicken Wings</p>
+                    <span>₱220.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('BBQ Chicken Wings', 220)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sides/Crispy Fried Chicken.png" alt="Side Image">
+                    <p>Crispy Fried Chicken</p>
+                    <span>₱200.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Crispy Fried Chicken', 200)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sides/Honey BBQ Wings.png" alt="Side Image">
+                    <p>Honey BBQ Wings</p>
+                    <span>₱180.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Honey BBQ Wings', 180)">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="menu/Sides/Spicy Chicken Wings.png" alt="Side Image">
+                    <p>Spicy Chicken Wings</p>
+                    <span>₱190.00</span>
+                    <br> <button class="add-to-cart" onclick="addItemToCart('Spicy Chicken Wings', 190)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+  
+        </section>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+            <br><br><br><br><br>
+            <h3>My Order</h3>
+            <div id="orderList"></div>
+            <div class="total">
+                <p class="total-text">TOTAL</p>
+                <span id="totalAmount" class="total-price">₱0.00</span>
+                <div id="discountMessage"></div>
+            </div>          
+            <br> <button class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</button>
+        </aside>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
